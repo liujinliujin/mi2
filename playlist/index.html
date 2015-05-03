@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .wrapper{
+            margin: 0 auto;
+            width: 960px;
+        }
+        .input-style{
+            width: 300px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        #playlist{
+            list-style: none;
+        }
+        #playlist li{
+            padding: 6px ;
+
+        }
+     </style>
+</head>
+<body>
+<div class="wrapper">
+    <div style="text-align: center">
+        <input type="text" id="inputSong" class="input-style" placeholder="Song's name"/>
+        <input type="button" id="addButton" value="add song" onclick="handleButtonClick()"/>
+    </div>
+    <ul id="playlist">
+
+    </ul>
+    <script>
+        function handleButtonClick(){
+            var textInput =document.getElementById("inputSong");
+            var songName = textInput.value;
+            if(songName==""){
+                alert("please input the song's name");
+            }else{
+                var li =document.createElement("li");
+                li.innerHTML =songName;
+                var ul =document.getElementById("playlist");
+                ul.appendChild(li);
+            }
+        }
+    </script>
+</div>
+</body>
+</html>

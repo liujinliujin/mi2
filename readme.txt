@@ -1,1 +1,2 @@
-123456
+This project is for training.
+
